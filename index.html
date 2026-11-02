@@ -394,6 +394,81 @@
     footer strong {
       color: white;
     }
+    /* STATS */
+.stats {
+  padding: 55px 0;
+  background: #123b30;
+  color: white;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.stat {
+  padding: 15px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 38px;
+  color: #f0c65a;
+  margin-bottom: 5px;
+}
+
+.stat span {
+  color: #d7e3dd;
+  font-size: 14px;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  background: #ffffff;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.testimonial {
+  padding: 30px;
+  border: 1px solid #e3e9e5;
+  border-radius: 14px;
+  background: #ffffff;
+  transition: 0.25s;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(18,59,48,0.09);
+}
+
+.stars {
+  color: #d49b22;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.testimonial p {
+  color: #59665f;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.testimonial strong {
+  display: block;
+  color: #123b30;
+}
+
+.testimonial span {
+  color: #7a847f;
+  font-size: 14px;
+      }
 
     /* MOBILE */
     @media (max-width: 800px) {
@@ -420,10 +495,12 @@
       }
 
       .cards,
-      .pricing-grid,
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
+.pricing-grid,
+.about-grid,
+.stats-grid,
+.testimonial-grid {
+  grid-template-columns: 1fr;
+}
 
       .price-card.featured {
         transform: none;
