@@ -469,6 +469,77 @@
   color: #7a847f;
   font-size: 14px;
       }
+    
+    /* PORTFOLIO */
+.portfolio {
+  background: #f5f8f6;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid #e3e9e5;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: 0.25s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(18,59,48,0.10);
+}
+
+.project-image {
+  height: 210px;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.project-image span {
+  background: white;
+  color: #123b30;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.project-one {
+  background: linear-gradient(135deg, #123b30, #5b927c);
+}
+
+.project-two {
+  background: linear-gradient(135deg, #d49b22, #f0c65a);
+}
+
+.project-three {
+  background: linear-gradient(135deg, #263c68, #7892c4);
+}
+
+.project-content {
+  padding: 24px;
+}
+
+.project-content h3 {
+  color: #123b30;
+  margin-bottom: 8px;
+}
+
+.project-content p {
+  color: #69756f;
+  margin-bottom: 16px;
+}
+
+.project-content a {
+  color: #123b30;
+  font-weight: 700;
+                                }
 
     /* MOBILE */
     @media (max-width: 800px) {
@@ -498,7 +569,8 @@
 .pricing-grid,
 .about-grid,
 .stats-grid,
-.testimonial-grid {
+.testimonial-grid,
+.portfolio-grid {
   grid-template-columns: 1fr;
 }
 
@@ -686,6 +758,57 @@
 
         </div>
       </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Featured Projects</h2>
+      <p>
+        Showcase your best work and give potential clients
+        a reason to choose your business.
+      </p>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <div class="project-card">
+        <div class="project-image project-one">
+          <span>Branding</span>
+        </div>
+        <div class="project-content">
+          <h3>Brand Identity</h3>
+          <p>Modern visual identity created for a growing business.</p>
+          <a href="#contact">View Project →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image project-two">
+          <span>Web Design</span>
+        </div>
+        <div class="project-content">
+          <h3>Business Website</h3>
+          <p>A clean digital experience designed for modern customers.</p>
+          <a href="#contact">View Project →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image project-three">
+          <span>Marketing</span>
+        </div>
+        <div class="project-content">
+          <h3>Growth Campaign</h3>
+          <p>A professional campaign designed to increase online reach.</p>
+          <a href="#contact">View Project →</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
     </section>
 
     <section class="cta">
