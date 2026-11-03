@@ -697,6 +697,20 @@ body.dark-mode .theme-btn {
         padding: 65px 0;
       }
     }
+    .nav-links.active {
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .nav-links a {
+    display: block;
+    width: 100%;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+    }
   </style>
 </head>
 
@@ -1007,8 +1021,14 @@ body.dark-mode .theme-btn {
 
   <script>
     function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
-    }
+  const navLinks = document.getElementById("navLinks");
+  navLinks.classList.toggle("active");
+}
+
+function closeMenu() {
+  const navLinks = document.getElementById("navLinks");
+  navLinks.classList.remove("active");
+}
 
     function closeMenu() {
   document.getElementById("navLinks").classList.remove("active");
