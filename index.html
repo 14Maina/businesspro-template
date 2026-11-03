@@ -1124,10 +1124,19 @@ function closeMenu() {
   event.preventDefault();
 
   const form = event.target;
-  const message = document.getElementById("form-success");
+  const successScreen = document.getElementById("success-screen");
 
-  message.style.display = "block";
   form.reset();
+
+  successScreen.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+function closeSuccessScreen() {
+  const successScreen = document.getElementById("success-screen");
+
+  successScreen.style.display = "none";
+  document.body.style.overflow = "";
     }
   </script>
 
