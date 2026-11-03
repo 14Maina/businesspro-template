@@ -759,6 +759,27 @@ section {
   }
   }
 
+    .hero-visual {
+  margin-top: 35px;
+  border-radius: 18px;
+  overflow: hidden;
+  max-width: 700px;
+  box-shadow: 0 15px 40px rgba(18,59,48,0.12);
+}
+
+.hero-visual img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .hero-visual img {
+    height: 220px;
+  }
+    }
+
     /* MOBILE */
     @media (max-width: 800px) {
       .menu-btn {
@@ -854,6 +875,12 @@ section {
     <section class="hero" id="home">
       <div class="container">
         <div class="hero-content">
+          <div class="hero-visual">
+  <img
+    src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200"
+    alt="Modern empty business workspace"
+  >
+          </div>
           <span class="badge">Modern Business Template</span>
 
           <h1>Build a business that <span>stands out.</span></h1>
