@@ -648,6 +648,63 @@ body.dark-mode .theme-btn {
   border-color: #405449;
   }
 
+    /* FULL SCREEN SUCCESS */
+.success-screen {
+  display: none;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 100dvh;
+  background: #123b30;
+  color: white;
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  text-align: center;
+}
+
+.success-content {
+  max-width: 500px;
+}
+
+.success-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #f0c65a;
+  color: #123b30;
+  font-size: 65px;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 30px;
+}
+
+.success-content h1 {
+  font-size: 38px;
+  margin-bottom: 18px;
+  color: white;
+}
+
+.success-content p {
+  color: #d7e3dd;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.success-content button {
+  background: #f0c65a;
+  color: #123b30;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+    }
+
     /* MOBILE */
     @media (max-width: 800px) {
       .menu-btn {
