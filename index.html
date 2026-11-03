@@ -1137,6 +1137,13 @@ function closeSuccessScreen() {
 
   successScreen.style.display = "none";
   document.body.style.overflow = "";
+
+  window.location.hash = "home";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
     }
   </script>
 
