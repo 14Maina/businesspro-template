@@ -955,6 +955,7 @@ section {
   scroll-margin-top: 90px;
   }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -1312,17 +1313,49 @@ function closeMenu() {
   }
     }
 
-    function submitForm(event) {
+    (function () {
+  emailjs.init({
+    publicKey: "oRTluyoIsbNWc40IM",
+  });
+})();
+
+async function submitForm(event) {
   event.preventDefault();
 
   const form = event.target;
   const successScreen = document.getElementById("success-screen");
+  const button = form.querySelector('button[type="submit"]');
 
-  form.reset();
+  button.disabled = true;
+  button.textContent = "Sending...";
 
-  successScreen.style.display = "flex";
-  document.body.style.overflow = "hidden";
-}
+  const templateParams = {
+    name: form.querySelector('input[type="text"]').value,
+    email: form.querySelector('input[type="email"]').value,
+    subject: form.querySelectorAll('input[type="text"]')[1].value,
+    message: form.querySelector('textarea').value
+  };
+
+  try {
+    await emailjs.send(
+      "service_vajzriu",
+      "template_fhwxhxn",
+      templateParams
+    );
+
+    form.reset();
+    successScreen.style.display = "flex";
+    document.body.style.overflow = "hidden";
+
+  } catch (error) {
+    alert("Message could not be sent. Please try again.");
+    console.error("EmailJS error:", error);
+
+  } finally {
+    button.disabled = false;
+    button.textContent = "Send Message";
+  }
+    }
 
 function closeSuccessScreen() {
   const successScreen = document.getElementById("success-screen");
