@@ -569,6 +569,85 @@
   margin-top: 15px;
     }
 
+    /* DARK MODE */
+.theme-btn {
+  border: 1px solid #d8e0db;
+  background: white;
+  padding: 9px 13px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+body.dark-mode {
+  background: #101b17;
+  color: #e9f0ec;
+}
+
+body.dark-mode header,
+body.dark-mode .card,
+body.dark-mode .price-card,
+body.dark-mode .testimonial,
+body.dark-mode .faq-list details {
+  background: #192821;
+  color: #e9f0ec;
+  border-color: #34483e;
+}
+
+body.dark-mode .services,
+body.dark-mode .testimonials,
+body.dark-mode .contact,
+body.dark-mode .faq {
+  background: #101b17;
+}
+
+body.dark-mode .about,
+body.dark-mode .portfolio {
+  background: #16241e;
+}
+
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode .section-heading h2,
+body.dark-mode .about h2 {
+  color: #f0c65a;
+}
+
+body.dark-mode p,
+body.dark-mode .card p,
+body.dark-mode .testimonial p {
+  color: #c0cec6;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background: #192821;
+  color: white;
+  border-color: #405449;
+}
+
+body.dark-mode .hero {
+  background: linear-gradient(135deg, #162b21, #101b17);
+}
+
+body.dark-mode .hero h1 {
+  color: white;
+}
+
+body.dark-mode .nav-links {
+  background: #192821;
+}
+
+body.dark-mode .nav-links a {
+  color: white;
+}
+
+body.dark-mode .theme-btn {
+  background: #192821;
+  color: white;
+  border-color: #405449;
+  }
+
     /* MOBILE */
     @media (max-width: 800px) {
       .menu-btn {
@@ -629,6 +708,8 @@
         <a href="#home" class="logo">Business<span>Pro</span></a>
 
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
 
         <ul class="nav-links" id="navLinks">
           <li><a href="#home">Home</a></li>
@@ -925,6 +1006,18 @@
   <script>
     function toggleMenu() {
       document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    function toggleTheme() {
+  document.body.classList.toggle("dark-mode");
+
+  const button = document.querySelector(".theme-btn");
+
+  if (document.body.classList.contains("dark-mode")) {
+    button.textContent = "☀️";
+  } else {
+    button.textContent = "🌙";
+  }
     }
 
     function submitForm(event) {
