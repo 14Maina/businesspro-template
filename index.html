@@ -1006,9 +1006,22 @@ body.dark-mode .theme-btn {
 
         </form>
 
-        <p id="form-success" style="display:none; color:#1d604b; font-weight:bold; margin-top:20px; text-align:center;">
-  ✓ Thank you! Your message has been received successfully.
-        </p>
+        <div id="success-screen" class="success-screen">
+  <div class="success-content">
+    <div class="success-icon">✓</div>
+
+    <h1>Message Sent!</h1>
+
+    <p>
+      Thank you for contacting us.
+      Your message has been received successfully.
+    </p>
+
+    <button onclick="closeSuccessScreen()">
+      Back to Website
+    </button>
+  </div>
+        </div>
 
       </div>
     </section>
