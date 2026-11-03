@@ -1049,10 +1049,12 @@ function closeMenu() {
     function submitForm(event) {
   event.preventDefault();
 
-  alert("Thank you! Your message has been received.");
+  const form = event.target;
+  const message = document.getElementById("form-success");
 
-  event.target.reset();
-                                 }
+  message.style.display = "block";
+  form.reset();
+    }
   </script>
 
 </body>
