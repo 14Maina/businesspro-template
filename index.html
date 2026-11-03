@@ -1239,16 +1239,16 @@ section {
           <p>Let customers easily get in touch with your business.</p>
         </div>
 
-        <form class="contact-form" onsubmit="submitForm(event)">
+        <form class="contact-form" id="contact-form">
 
           <div class="form-row">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-          </div>
+            <input type="text" name="name" placeholder="Your Name" required>
 
-          <input type="text" placeholder="Subject" required>
+<input type="email" name="email" placeholder="Your Email" required>
 
-          <textarea placeholder="Your Message" required></textarea>
+<input type="text" name="title" placeholder="Subject" required>
+
+<textarea name="message" placeholder="Your Message" required></textarea>
 
           <button class="btn btn-primary" type="submit">
             Send Message
