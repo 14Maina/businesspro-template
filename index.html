@@ -1348,8 +1348,10 @@ async function submitForm(event) {
     document.body.style.overflow = "hidden";
 
   } catch (error) {
-    alert("Message could not be sent. Please try again.");
-    console.error("EmailJS error:", error);
+  alert("Message could not be sent. Please try again.");
+  console.error("EmailJS error:", error);
+  alert(error.text || error.message);
+    }
 
   } finally {
     button.disabled = false;
