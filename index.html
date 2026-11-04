@@ -877,69 +877,76 @@ section {
   line-height: 1.8;
   }
 
-    /* MOBILE */
-    @media (max-width: 800px) {
-      .menu-btn {
-        display: block;
-      }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        left: 4%;
-        right: 4%;
-        top: 70px;
-        padding: 20px;
-        background: white;
-        border: 1px solid #e2e8e4;
-        border-radius: 12px;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .cards,
-.pricing-grid,
-.about-grid,
-.stats-grid,
-.testimonial-grid,
-.portfolio-grid {
-  grid-template-columns: 1fr;
-}
-
-      .price-card.featured {
-        transform: none;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 75px 0;
-      }
-
-      section {
-        padding: 65px 0;
-      }
-    }
-    .nav-links.active {
-  display: flex;
-}
-
+    
+/* MOBILE */
 @media (max-width: 800px) {
-  .nav-links a {
+  nav {
+    position: relative;
+  }
+
+  .menu-btn {
+    display: block;
+    cursor: pointer;
+    z-index: 1002;
+  }
+
+  .theme-btn {
+    display: block;
+    cursor: pointer;
+    z-index: 1002;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    left: 4%;
+    right: 4%;
+    top: 70px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #e2e8e4;
+    border-radius: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1001;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a,
+  .nav-links li {
     display: block;
     width: 100%;
   }
 
-  .nav-links li {
-    width: 100%;
+  .cards,
+  .pricing-grid,
+  .about-grid,
+  .stats-grid,
+  .testimonial-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
   }
-    }
+
+  .price-card.featured {
+    transform: none;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 75px 0;
+  }
+
+  section {
+    padding: 65px 0;
+  }
+  }
+  
     /* PORTFOLIO NAVIGATION FIX */
 #portfolio {
   scroll-margin-top: 90px;
