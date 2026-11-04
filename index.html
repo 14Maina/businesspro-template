@@ -1330,10 +1330,21 @@ function closeMenu() {
   });
 })();
 
+
 async function submitForm(event) {
   event.preventDefault();
 
   const form = event.target;
+
+  // Anti-spam protection
+  const honeypot = form.querySelector(
+    'input[name="website_check"]'
+  );
+
+  if (honeypot && honeypot.value.trim() !== "") {
+    return;
+  }
+
   const successScreen = document.getElementById("success-screen");
   const button = form.querySelector('button[type="submit"]');
 
@@ -1366,6 +1377,8 @@ async function submitForm(event) {
     button.disabled = false;
     button.textContent = "Send Message";
   }
+    }
+    
     }
 
 function closeSuccessScreen() {
