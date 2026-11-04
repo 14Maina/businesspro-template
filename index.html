@@ -1330,10 +1330,10 @@ async function submitForm(event) {
   button.textContent = "Sending...";
 
   const templateParams = {
-    name: form.querySelector('input[type="text"]').value,
-    email: form.querySelector('input[type="email"]').value,
-    subject: form.querySelectorAll('input[type="text"]')[1].value,
-    message: form.querySelector('textarea').value
+    name: form.querySelector('input[name="name"]').value,
+    email: form.querySelector('input[name="email"]').value,
+    subject: form.querySelector('input[name="title"]').value,
+    message: form.querySelector('textarea[name="message"]').value
   };
 
   try {
@@ -1348,10 +1348,8 @@ async function submitForm(event) {
     document.body.style.overflow = "hidden";
 
   } catch (error) {
-  alert("Message could not be sent. Please try again.");
-  console.error("EmailJS error:", error);
-  alert(error.text || error.message);
-    }
+    console.error("EmailJS error:", error);
+    alert("Message could not be sent: " + (error.text || error.message));
 
   } finally {
     button.disabled = false;
