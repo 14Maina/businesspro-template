@@ -1248,8 +1248,6 @@ section {
 
         <form class="contact-form" onsubmit="submitForm(event)">
 
-<form class="contact-form" onsubmit="submitForm(event)">
-
   <div class="form-row">
 
     <input type="text" name="name" placeholder="Your Name" required>
@@ -1305,11 +1303,9 @@ section {
   </footer>
 
   <script>
-    function toggleMenu() {
-  co
+    
 function toggleMenu() {
   const navLinks = document.getElementById("navLinks");
-
   if (navLinks) {
     navLinks.classList.toggle("active");
   }
@@ -1317,7 +1313,6 @@ function toggleMenu() {
 
 function closeMenu() {
   const navLinks = document.getElementById("navLinks");
-
   if (navLinks) {
     navLinks.classList.remove("active");
   }
@@ -1340,14 +1335,11 @@ function toggleTheme() {
   });
 })();
 
-
-
 async function submitForm(event) {
   event.preventDefault();
 
   const form = event.target;
 
-  // Anti-spam protection
   const honeypot = form.querySelector(
     'input[name="website_check"]'
   );
@@ -1388,16 +1380,16 @@ async function submitForm(event) {
     button.disabled = false;
     button.textContent = "Send Message";
   }
-    }
-    
-    }
+}
 
 function closeSuccessScreen() {
   const successScreen = document.getElementById("success-screen");
 
-  successScreen.style.display = "none";
-  document.body.style.overflow = "";
+  if (successScreen) {
+    successScreen.style.display = "none";
+  }
 
+  document.body.style.overflow = "";
   window.location.hash = "home";
 
   window.scrollTo({
